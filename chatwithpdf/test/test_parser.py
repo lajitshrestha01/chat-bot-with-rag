@@ -25,10 +25,7 @@ def test_basic_parse():
         print(f"ERROR: Place a PDF at {test_pdf} first")
         return
     
-    pages = parser.parse_with_metadata("data/raw_pdfs/test.pdf")
-    print(f"Title: {pages[0]['document_title']}")
-    print(f"Total pages: {pages[0]['total_pages']}")
-    print(f"Word count page 1: {pages[0]['word_count']}")
+    pages = parser.parse(test_pdf)
 
     print(f"✓ Parsed {len(pages)} pages")
     
